@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}ADD{%endblock%}
+{% block head %}{%endblock%}
+
+{% block content %}
+<div id="add_page" class="aligned-div">
+    <h1 style="font-size:2rem;" class="lefted-align">Add a new cafe into the database</h1>
+
+    <form >
+         <div class="mb-3 ">
+            <label style="text-align:left;" class="form-label d-flex justify-content-start">Cafe name</label>
+            <input type="email" class="form-control text-bg-light" >
+         </div>
+        <div class="mb-3">
+            <label style="text-align:left;" class="form-label d-flex justify-content-start">Location</label>
+            <input type="email" class="form-control text-bg-light" >
+        </div>
+
+        <div class="mb-3">
+            <label style="text-align:left;" class="form-label d-flex justify-content-start">Open</label>
+            <input type="email" class="form-control text-bg-light" >
+        </div>
+        <div class="mb-3">
+            <label style="text-align:left;" class="form-label d-flex justify-content-start">Close</label>
+            <input type="email" class="form-control text-bg-light" >
+        </div>
+
+             <div class="mb-3">
+            <label style="text-align:left;" class="form-label d-flex justify-content-start">Coffee</label>
+            <input type="email" class="form-control text-bg-light" >
+        </div>
+
+        <div class="mb-3">
+            <label style="text-align:left;" class="form-label d-flex justify-content-start">Wifi</label>
+            <input type="email" class="form-control text-bg-light" >
+        </div>
+        <div class="mb-3">
+            <label style="text-align:left;" class="form-label d-flex justify-content-start">Power</label>
+            <input type="email" class="form-control text-bg-light" >
+        </div>
+
+         <button type="submit" class="btn btn-primary d-flex justify-content-start">Submit</button>
+    </form>
+
+    <a class=" mt-5 d-flex justify-content-start link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover " href="/cafe">See all Cafes</a>
+
+</div>
+{%endblock%}

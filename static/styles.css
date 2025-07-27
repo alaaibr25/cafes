@@ -1,0 +1,30 @@
+html, body{width:100%;
+            height:100%;
+            margin:0;
+            text-align:center;
+            --bs-body-bg:#333333;
+            --bs-body-color:white;}
+
+
+a{text-align:left;
+        --bs-link-color:yellow;
+        --bs-link-color-rgb:255, 165, 0;
+        --bs-link-hover-color:orange;
+        --bs-link-hover-color-rgb:255, 165, 0; }
+
+.lefted-align{text-align:left;}
+
+.page1{padding-top:100px;}
+.p_pg1{margin:20px 0;}
+
+
+.aligned-div{margin:0 70px 0 70px;
+            padding:20px;}
+
+.form-control{}
+form{width:700px;}
+
+@media (max-width: 800px){
+        .p_pg1{width:75%;margin:20px 30px 30px 100px;}
+        form{width:100%;}
+}
