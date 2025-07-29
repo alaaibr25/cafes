@@ -1,45 +1,26 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% from 'bootstrap5/form.html' import render_field %}
+
 {% extends "base.html" %}
 {% block title %}ADD{%endblock%}
 {% block head %}{%endblock%}
 
 {% block content %}
-<div id="add_page" class="aligned-div">
+<div id="add_page" class="aligned-div  " style="text-align:left;" >
     <h1 style="font-size:2rem;" class="lefted-align">Add a new cafe into the database</h1>
 
-    <form >
-         <div class="mb-3 ">
-            <label style="text-align:left;" class="form-label d-flex justify-content-start">Cafe name</label>
-            <input type="email" class="form-control text-bg-light" >
-         </div>
-        <div class="mb-3">
-            <label style="text-align:left;" class="form-label d-flex justify-content-start">Location</label>
-            <input type="email" class="form-control text-bg-light" >
-        </div>
+    <form  method="POST"  action="/add" novalidate>
 
-        <div class="mb-3">
-            <label style="text-align:left;" class="form-label d-flex justify-content-start">Open</label>
-            <input type="email" class="form-control text-bg-light" >
-        </div>
-        <div class="mb-3">
-            <label style="text-align:left;" class="form-label d-flex justify-content-start">Close</label>
-            <input type="email" class="form-control text-bg-light" >
-        </div>
+        {{ form.csrf_token }}
+        {{ render_field(form.name, class=  ' text-bg-light ')}}
+        {{ render_field(form.loc, class=  ' text-bg-light ')}}
+        {{ render_field(form.open, class=  ' text-bg-light ')}}
+        {{ render_field(form.close, class=  ' text-bg-light ')}}
+        {{ render_field(form.coffee, class=  ' text-bg-light ')}}
+        {{ render_field(form.wifi, class=  ' text-bg-light ')}}
+        {{ render_field(form.power, class=  'text-bg-light')}}
+        {{ render_field(form.submit)}}
 
-             <div class="mb-3">
-            <label style="text-align:left;" class="form-label d-flex justify-content-start">Coffee</label>
-            <input type="email" class="form-control text-bg-light" >
-        </div>
-
-        <div class="mb-3">
-            <label style="text-align:left;" class="form-label d-flex justify-content-start">Wifi</label>
-            <input type="email" class="form-control text-bg-light" >
-        </div>
-        <div class="mb-3">
-            <label style="text-align:left;" class="form-label d-flex justify-content-start">Power</label>
-            <input type="email" class="form-control text-bg-light" >
-        </div>
-
-         <button type="submit" class="btn btn-primary d-flex justify-content-start">Submit</button>
     </form>
 
     <a class=" mt-5 d-flex justify-content-start link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover " href="/cafe">See all Cafes</a>
