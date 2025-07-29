@@ -3,33 +3,32 @@
 {% block head %}{%endblock%}
 
 {% block content %}
-<div id="cafes_page" class="aligned-div">
+<div id="cafes_page" class="aligned-div" >
     <h1 class="lefted-align" >All Cafes</h1>
-    <table class="table table-dark table-striped">
-        <thead>
+    <table class="table table-dark table-striped " >
+
             <tr>
-                <th scope="col">Cafe Name</th>
-                <th scope="col">Location</th>
-                <th scope="col">Open</th>
-                <th scope="col">Close</th>
-                <th scope="col">Coffee</th>
-                <th scope="col">Wifi</th>
-                <th scope="col">Power</th>
+                {%for c in all_cafes[0]%}
+                <th>{{c}}</th>
+                {%endfor%}
+            </tr>
+
+            {%for c in list_cafes[1:]%}
+            <tr>
+                {% for n in range(0, 7) %}
+                    {% if n == 1%}
+                <td> <a class="link-underline link-underline-opacity-0" href="{{c.split(',')[n]}}"> Map Link </a> </td>
+                {%else%}
+                <td>{{c.split(',')[n]}}</td>
+                {% endif %}
+
+                {%endfor%}
 
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
+             {%endfor%}
 
-            </tr>
-        </tbody>
+
+
     </table>
     <a  class=" d-flex justify-content-start link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover " href="{{url_for('main_page')}}">Return to index Page</a>
 
