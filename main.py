@@ -16,7 +16,7 @@ class CafeForm(FlaskForm):
     submit = SubmitField('Submit')
 
 app = Flask(__name__)
-app.secret_key = "ndwkcns8uh3jkqwnms"
+app.secret_key = ""
 
 
 bootstrap = Bootstrap5(app)
